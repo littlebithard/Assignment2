@@ -13,7 +13,7 @@ public class PerformanceTracker {
     public void access() { arrayAccesses++; }
     public void access(int count) { arrayAccesses += count; }
     public void compare(long count) { comparisons += count; }
-    public void swap() { swaps++; arrayAccesses += 4; } // estimate
+    public void swap() { swaps++; arrayAccesses += 4; }
 
     @Override
     public String toString() {

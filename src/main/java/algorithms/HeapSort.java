@@ -43,5 +43,7 @@ public class HeapSort {
         t.swap();
     }
 
-    private static int parent(int i) { return (i - 1) / 2; }
+    private static int parent(int i) {
+        return (i - 1) / 2; 
+    }
 }
