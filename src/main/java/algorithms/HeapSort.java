@@ -4,11 +4,11 @@ import metrics.PerformanceTracker;
 
 public class HeapSort {
     public static void sort(int[] a, PerformanceTracker t) {
-        if (a == null) return;
+        if (a == null || a.length <= 1) return;
         int n = a.length;
         for (int i = parent(n - 1); i >= 0; i--) siftDown(a, i, n, t);
         for (int end = n - 1; end > 0; end--) {
-            swap(a, 0, end, t);
+            if (a[0] != a[end]) swap(a, 0, end, t);
             siftDown(a, 0, end, t);
         }
     }

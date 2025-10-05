@@ -15,13 +15,12 @@ public class ShellSort {
             for (int i = gap; i < n; i++) {
                 int temp = a[i]; t.access(1);
                 int j = i;
-                while (j >= gap) {
-                    t.compare(1);
+                t.compare(1);
+                while (j >= gap && a[j - gap] > temp) {
                     t.access(1);
-                    if (a[j - gap] <= temp) break;
-                    a[j] = a[j - gap]; t.access(2);
+                    a[j] = a[j - gap]; t.access(2); t.swap();
                     j -= gap;
-                    t.swap();
+                    if (j >= gap) t.compare(1);
                 }
                 a[j] = temp; t.access(1);
             }
