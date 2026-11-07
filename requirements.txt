@@ -1,0 +1,12 @@
+torch>=2.3
+torchvision>=0.18
+numpy
+pandas
+scikit-learn
+scikit-image
+opencv-python-headless
+matplotlib
+pillow
+gradio>=4.0
+huggingface_hub
+jupyter
